@@ -1,0 +1,7 @@
+2025-04-09 14:06:01.480052 - scientist | Traduction | Texte: hello my name is zino i love a girls
+
+2025-04-09 14:08:56.975552 - analyste | Traduction | Texte: dis moi 
+2025-04-09 14:09:44.754251 - scientist | Traduction | Texte: dis moi 
+2025-04-09 14:09:56.494112 - scientist | Traduction | Texte: tell me
+2025-04-09 14:12:07.515565 - scientist | Traduction | Texte: How old are you
+2025-04-09 14:12:46.273588 - analyste | Traduction | Texte: How old are you

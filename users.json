@@ -1,0 +1,10 @@
+{
+  "scientist": {
+    "password": "secure123",
+    "role": "scientist"
+  },
+  "analyste": {
+    "password": "lectureonly",
+    "role": "analyste"
+  }
+}
