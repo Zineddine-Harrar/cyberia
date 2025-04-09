@@ -15,7 +15,7 @@ SecureNLP est une application Streamlit qui permet de traduire un texte de l'ang
 - 🔒 Chiffrement Fernet du texte traduit
 - 📃 Journalisation dans `log_access.txt`
 - 🔓 Rôles :
-  - `admin` : accès au texte déchiffré
+  - `scientist` : accès au texte déchiffré
   - `analyste` : accès uniquement au texte chiffré
 - 📄 Téléchargement du journal depuis l'app
 - 🔐 Bouton de déconnexion
@@ -61,7 +61,7 @@ REGION = "eastus"
     "role": "scientist"
   },
   "analyste": {
-    "password": "lectureonly",
+    "password": "readonly",
     "role": "analyste"
   }
 }
