@@ -1,4 +1,3 @@
-
 import streamlit as st
 import json
 import requests
@@ -8,7 +7,7 @@ from datetime import datetime
 import hashlib
 
 # Configuration Azure Translator
-TRANSLATOR_KEY = "VOTRE_CLE"
+TRANSLATOR_KEY = "lyxdTbUg0rOF3LUigJrNkiWCAXmpRn5fEPpFR44gFlBx99a5sxDhJQQJ99BDACYeBjFXJ3w3AAAbACOGoB63"
 REGION = "eastus"
 ENDPOINT = "https://api.cognitive.microsofttranslator.com"
 
@@ -18,19 +17,14 @@ def charger_utilisateurs():
     with open("users.json") as f:
         return json.load(f)
 
-# Hachage du mot de passe (SHA-256)
-def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
-
 # Journalisation
 def log_event(event):
     with open("log_access.txt", "a") as f:
         f.write(f"{datetime.now()} - {event}\n")
 
-# Authentification avec mot de passe haché
+# Authentification simple
 def verifier_utilisateur(users, username, password):
-    password_hash = hash_password(password)
-    if username in users and users[username]["password"] == password_hash:
+    if username in users and users[username]["password"] == password:
         return users[username]["role"]
     return None
 
@@ -65,13 +59,6 @@ with st.sidebar:
     password = st.text_input("Mot de passe", type="password")
     authentifie = st.button("Se connecter")
 
-    if st.session_state.get("connected"):
-        if st.button("🔓 Se déconnecter"):
-            st.session_state.connected = False
-            st.session_state.username = ""
-            st.session_state.role = ""
-            st.experimental_rerun()
-
 if "connected" not in st.session_state:
     st.session_state.connected = False
 
@@ -101,12 +88,12 @@ if st.session_state.connected:
             st.text("Texte chiffré :")
             st.code(texte_chiffre, language="text")
 
-            if st.session_state.role == "admin":
+            if st.session_state.role == "scientist":
                 texte_dechiffre = cipher.decrypt(texte_chiffre.encode()).decode()
                 st.text("Texte déchiffré :")
                 st.success(texte_dechiffre)
             else:
-                st.info("Seuls les administrateurs peuvent voir le texte déchiffré.")
+                st.info("Seuls les scientist peuvent voir le texte déchiffré.")
         except Exception as e:
             st.error(f"Erreur : {e}")
 
