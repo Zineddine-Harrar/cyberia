@@ -31,7 +31,7 @@ secure-nlp-app/
 ├── log_access.txt         # Journal d'activité (généré automatiquement)
 ├── requirements.txt       # Dépendances Python
 └── .streamlit/
-    └── secrets.toml       # Clés API Azure (optionnel)
+    └── secrets.toml       # Clés API Azure
 ```
 
 ---
