@@ -1,10 +1,10 @@
 {
     "scientist": {
-        "password": "b5692500175fad6bb2b306aa20ff58423c79b130ef310fb3caa924e0f28bc61d",
+        "password": "secure123",
         "role": "scientist"
     },
     "analyste": {
-        "password": "be318566a6d1c318224af4d7c2e25d246004ed92289b65aa03273b2b31eaf95d",
+        "password": "readonly",
         "role": "analyste"
     }
 }
