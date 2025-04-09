@@ -38,14 +38,14 @@ secure-nlp-app/
 
 ## 🚀 Déploiement
 
-### 1. Clonnage du projet ou uploader sur GitHub
+### 1. Clonnage du projet sur GitHub
 ### 2. Aller sur [streamlit.io/cloud](https://streamlit.io/cloud)
 ### 3. Choisir le repo GitHub
 ### 4. Définir le fichier à exécuter : `app.py`
 
 ### 5. Ajouter le fichier `.streamlit/secrets.toml` :
 ```toml
-TRANSLATOR_KEY = "VOTRE_CLE"
+TRANSLATOR_KEY = "CLE"
 REGION = "eastus"
 ```
 
