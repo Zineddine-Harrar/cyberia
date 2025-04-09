@@ -38,7 +38,7 @@ secure-nlp-app/
 
 ## 🚀 Déploiement
 
-### 1. Cloner le projet ou uploader sur GitHub
+### 1. Clonnage du projet ou uploader sur GitHub
 ### 2. Aller sur [streamlit.io/cloud](https://streamlit.io/cloud)
 ### 3. Choisir le repo GitHub
 ### 4. Définir le fichier à exécuter : `app.py`
@@ -56,9 +56,9 @@ REGION = "eastus"
 ## 📊 Exemple de `users.json`
 ```json
 {
-  "admin": {
+  "scientist": {
     "password": "secure123",
-    "role": "admin"
+    "role": "scientist"
   },
   "analyste": {
     "password": "lectureonly",
